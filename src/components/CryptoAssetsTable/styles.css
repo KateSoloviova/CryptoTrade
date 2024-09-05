@@ -1,0 +1,63 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff; 
+  color: #333; 
+  font-family: 'Arial', sans-serif;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 13px 30px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  font-weight: bold;
+  color: #6b7280;
+  background-color: #f3f4f6;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+td {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.coin-name {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+}
+
+td .action-btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.toggle-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn {
+  background-color: #1d4ed8;
+}
+
+.crypto-icon {
+  width: 33px;
+  height: 32px;
+}
+.crypto-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}

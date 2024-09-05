@@ -1,0 +1,31 @@
+.dropdown-menu {
+  background-color: #e5f3ff;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 16px;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropdown-menu:hover {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.5); 
+}
+
+.dropdown-menu:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.5);
+}
+
+.dropdown-menu:disabled:hover {
+  box-shadow: none; 
+  cursor: not-allowed;
+}
+
+.dropdown-menu option {
+  display: flex;
+  align-items: center;
+}
