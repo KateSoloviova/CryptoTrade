@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Layout } from './components/Layout';
-import { HomePage } from './pages/HomePage';
-import { TradePage } from './pages/TradePage';
+import { Layout } from './components/Layout/Layout';
+import { HomePage } from './pages/HomePage/HomePage';
+import { TradePage } from './pages/TradePage/TradePage';
 
 export const App = () => {
   return (

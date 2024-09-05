@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import  useAuthStore from '../../store/authStore';
-import { Button } from '../Button';
+import { Button } from '../Button/Button';
 import { LoginModalProps } from '../../services/api/utils/props';
 import './styles.css';
 

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useQuery } from 'react-query';
 import { getCryptoAssets } from '../../services/api/getCryptoAssets';
-import { Button } from '../../components/Button';
+import { Button } from '../../components/Button/Button';
 import useAuthStore from '../../store/authStore';
 import { calculateFiatAmount } from '../../services/api/utils/utils';
-import { DropdownMenu } from '../../components/DropdownMenu';
+import { DropdownMenu } from '../../components/DropdownMenu/DropdownMenu';
 import { CryptoItemType } from '../../services/api/utils/props';
 import './styles.css';
 

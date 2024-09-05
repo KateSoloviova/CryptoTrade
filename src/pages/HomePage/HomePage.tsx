@@ -1,4 +1,4 @@
-import { CryptoAssetsTable } from '../../components/CryptoAssetsTable';
+import { CryptoAssetsTable } from '../../components/CryptoAssetsTable/CryptoAssetsTable';
 import './styles.css';
 
 export const HomePage = () => {

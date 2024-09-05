@@ -1,8 +1,8 @@
 import { useQuery } from 'react-query';
 import { useState } from 'react';
 import { getCryptoAssets } from '../../services/api/getCryptoAssets';
-import { CryptoItem } from '../CryptoItem';
-import { Button } from '../Button';
+import { CryptoItem } from '../CryptoItem/CryptoItem';
+import { Button } from '../Button/Button';
 import { CryptoItemType } from '../../services/api/utils/props';
 import './styles.css';
 

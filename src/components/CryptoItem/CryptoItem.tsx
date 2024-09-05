@@ -1,5 +1,5 @@
 import React from 'react';
-import { DropdownMenu } from '../DropdownMenu';
+import { DropdownMenu } from '../DropdownMenu/DropdownMenu';
 import { CryptoItemProps } from '../../services/api/utils/props';
 import { options } from '../../services/api/utils/utils';
 

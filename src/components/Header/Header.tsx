@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import  useAuthStore from '../../store/authStore';
-import { LoginModal } from '../LoginModal';
-import { Button } from '../Button';
+import { LoginModal } from '../LoginModal/LoginModal';
+import { Button } from '../Button/Button';
 import './styles.css';
 
 export const Header = () => {
