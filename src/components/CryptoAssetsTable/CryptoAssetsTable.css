@@ -1,7 +1,7 @@
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #ffffff; 
+  background-color: var(--white);
   color: #333; 
   font-family: 'Arial', sans-serif;
   table-layout: fixed;
@@ -14,14 +14,16 @@ th, td {
 }
 
 th {
-  font-weight: bold;
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
   color: #6b7280;
-  background-color: #f3f4f6;
-  border-bottom: 2px solid #e5e7eb;
+  background-color: var(--grey);
+
+  border-bottom: 2px solid var(--border-bottom-color);
 }
 
 td {
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--border-bottom-color);
 }
 
 .coin-name {
@@ -32,13 +34,13 @@ td {
 }
 
 td .action-btn:hover {
-  background-color: #007bff;
-  color: white;
+  background-color: var(--blue);
+  color: var(--white);
 }
 
 .toggle-btn {
-  background-color: #2563eb;
-  color: white;
+  background-color: var(--blue);
+  color: var(--white);
   padding: 10px 20px;
   font-size: 16px;
   border: none;
@@ -49,7 +51,7 @@ td .action-btn:hover {
 }
 
 .toggle-btn {
-  background-color: #1d4ed8;
+  background-color: var(--blue-hover);
 }
 
 .crypto-icon {

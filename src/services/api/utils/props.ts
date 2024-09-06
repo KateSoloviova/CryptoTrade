@@ -27,10 +27,15 @@ export interface CryptoItemProps {
 }
 
 export interface DropdownMenuProps {
-  options: { value: string; label: string }[];
+  options: OptionProp[];
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   disabled?: boolean;
+}
+
+export interface OptionProp {
+  value: string;
+  label: string;
 }
 
 export interface LoginModalProps {

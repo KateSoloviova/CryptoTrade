@@ -1,5 +1,5 @@
 main {
   padding: 50px 70px;
-  background-color: #f4f6fa;
+  background-color: var(--grey);
   min-height: 100vh;
 }

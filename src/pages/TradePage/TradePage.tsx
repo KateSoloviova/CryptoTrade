@@ -7,6 +7,7 @@ import { calculateFiatAmount } from '../../services/api/utils/utils';
 import { DropdownMenu } from '../../components/DropdownMenu/DropdownMenu';
 import { CryptoItemType } from '../../services/api/utils/props';
 import './TradePage.css';
+import '../../variables.css';
 
 export const TradePage = () => {
   const { isLoggedIn } = useAuthStore();

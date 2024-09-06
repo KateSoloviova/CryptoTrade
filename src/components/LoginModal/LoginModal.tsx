@@ -4,6 +4,7 @@ import  useAuthStore from '../../store/authStore';
 import { Button } from '../Button/Button';
 import { LoginModalProps } from '../../services/api/utils/props';
 import './LoginModal.css';
+import '../../variables.css';
 
 export const LoginModal: React.FC<LoginModalProps> = ({ onClose }) => {
   const { login } = useAuthStore();

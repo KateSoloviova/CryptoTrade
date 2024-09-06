@@ -4,6 +4,7 @@ import  useAuthStore from '../../store/authStore';
 import { LoginModal } from '../LoginModal/LoginModal';
 import { Button } from '../Button/Button';
 import './Header.css';
+import '../../variables.css';
 
 export const Header = () => {
   const { isLoggedIn, logout } = useAuthStore();

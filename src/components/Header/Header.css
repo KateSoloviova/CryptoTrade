@@ -1,6 +1,6 @@
 header {
   background-color: #2c2e30;
-  color: white;
+  color: var(--white);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,7 +9,7 @@ header {
   top: 0;
   z-index: 1000;
   font-family: sans-serif;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow-dark);
 }
 
 nav {
@@ -44,9 +44,9 @@ nav li a {
 }
 
 nav li a.active {
-  color:  #2563eb;
+  color:  var(--blue);
   font-weight: bold;
-  border-bottom: 2px solid  #2563eb;
+  border-bottom: 2px solid  var(--blue);
 }
 
 .user-info {
@@ -55,8 +55,8 @@ nav li a.active {
 }
 
 .user-info button {
-  background-color: #2563eb;
-  color: white;
+  background-color: var(--blue);
+  color: var(--white);
   padding: 8px 16px;
   font-size: 16px; 
   font-family: inherit; 
@@ -67,7 +67,7 @@ nav li a.active {
 }
 
 .user-info button:hover {
-  background-color: #1d4ed8;
+  background-color: var(--blue-hover);
 }
 
 .modal {
@@ -75,9 +75,8 @@ nav li a.active {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: var(--white);
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 1500;
   border-radius: 8px;
 }

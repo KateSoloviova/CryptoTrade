@@ -1,5 +1,6 @@
 import { CryptoAssetsTable } from '../../components/CryptoAssetsTable/CryptoAssetsTable';
 import './HomePage.css';
+import '../../variables.css';
 
 export const HomePage = () => {
   return (
