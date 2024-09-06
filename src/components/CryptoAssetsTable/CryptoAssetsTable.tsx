@@ -4,7 +4,7 @@ import { getCryptoAssets } from '../../services/api/getCryptoAssets';
 import { CryptoItem } from '../CryptoItem/CryptoItem';
 import { Button } from '../Button/Button';
 import { CryptoItemType } from '../../services/api/utils/props';
-import './styles.css';
+import './CryptoAssetsTable.css';
 
 export const CryptoAssetsTable = () => {
   const { data: assets, error, isLoading } = useQuery('cryptoAssets', getCryptoAssets);

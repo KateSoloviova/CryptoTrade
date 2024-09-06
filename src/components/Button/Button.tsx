@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButtonProps } from '../../services/api/utils/props';
-import './styles.css'; 
+import './Button.css'; 
 
 export const Button: React.FC<ButtonProps> = ({
   text,

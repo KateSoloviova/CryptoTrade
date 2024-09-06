@@ -1,6 +1,6 @@
 import React from 'react';
 import { DropdownMenuProps } from '../../services/api/utils/props';
-import './styles.css';
+import './DropdownMenu.css';
 
 export const DropdownMenu: React.FC<DropdownMenuProps> = ({ options, value, onChange, disabled }) => {
   return (

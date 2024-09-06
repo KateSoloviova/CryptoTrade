@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import  useAuthStore from '../../store/authStore';
 import { Button } from '../Button/Button';
 import { LoginModalProps } from '../../services/api/utils/props';
-import './styles.css';
+import './LoginModal.css';
 
 export const LoginModal: React.FC<LoginModalProps> = ({ onClose }) => {
   const { login } = useAuthStore();

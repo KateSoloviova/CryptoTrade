@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import  useAuthStore from '../../store/authStore';
 import { LoginModal } from '../LoginModal/LoginModal';
 import { Button } from '../Button/Button';
-import './styles.css';
+import './Header.css';
 
 export const Header = () => {
   const { isLoggedIn, logout } = useAuthStore();
