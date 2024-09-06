@@ -9,10 +9,11 @@ export const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
   size = 'medium',
   disabled = false,
+  className,
 }) => {
   return (
     <button
-      className={`btn ${variant} ${size}`}
+      className={`btn ${variant} ${size} ${className}`}
       disabled={disabled}
       onClick={(e) => {
         onClick && onClick(e); 

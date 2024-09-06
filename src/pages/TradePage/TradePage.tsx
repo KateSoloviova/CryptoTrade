@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useQuery } from 'react-query';
 import { getCryptoAssets } from '../../services/api/getCryptoAssets';
 import { Button } from '../../components/Button/Button';
@@ -17,6 +17,14 @@ export const TradePage = () => {
   const [cryptoAmount, setCryptoAmount] = useState<number>();
   const [fiatAmount, setFiatAmount] = useState<number>();
   const [isSwapped, setIsSwapped] = useState<boolean>(false);
+
+  const cryptoAmountInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (cryptoAmountInputRef.current) {
+      cryptoAmountInputRef.current.focus();
+    }
+  }, []);
 
   const handleAssetChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedAsset(e.target.value);
@@ -60,53 +68,56 @@ export const TradePage = () => {
   return (
     <div className="trade-container">
       <h1>Trade Form</h1>
-      <form className="trade-form flex-container">
-          <div
-            className="crypto-amount-wrapper"
-            style={{ order: isSwapped ? 2 : 1 }}
-          >
-            <input
-              type="number"
-              placeholder='0'
-              value={cryptoAmount}
-              onChange={handleCryptoAmountChange}
-              disabled={!isLoggedIn || !assets}
-              className="input-field"
-            />
+      <div className='flex-container'>
+        <form className="trade-form">
+            <div
+              className="crypto-amount-wrapper"
+              style={{ order: isSwapped ? 2 : 1 }}
+            >
+              <input
+                type="number"
+                ref={cryptoAmountInputRef} 
+                placeholder='0'
+                value={cryptoAmount}
+                onChange={handleCryptoAmountChange}
+                disabled={!isLoggedIn || !assets}
+                className="input-field"
+              />
 
-            <DropdownMenu
-              options={assetOptions}
-              value={selectedAsset}
-              onChange={handleAssetChange}
-              disabled={!isLoggedIn || !assets}
-            />
-          </div>
-          <div
-            className="crypto-amount-wrapper"
-            style={{ order: isSwapped ? 1 : 2 }}
-          >
-            <input
-              type="number"
-              placeholder='0'
-              id="fiatAmount"
-              value={fiatAmount}
-              onChange={handleFiatAmountChange}
-              disabled={!isLoggedIn || !assets}
-              className="input-field"
-            />
-            <span className="currency">USD</span>
-          </div>
+              <DropdownMenu
+                options={assetOptions}
+                value={selectedAsset}
+                onChange={handleAssetChange}
+                disabled={!isLoggedIn || !assets}
+              />
+            </div>
+            <div
+              className="crypto-amount-wrapper"
+              style={{ order: isSwapped ? 1 : 2 }}
+            >
+              <input
+                type="number"
+                placeholder='0'
+                id="fiatAmount"
+                value={fiatAmount}
+                onChange={handleFiatAmountChange}
+                disabled={!isLoggedIn || !assets}
+                className="input-field"
+              />
+              <span className="currency">USD</span>
+            </div>
+        </form>
 
-          <Button
-            text='&#8595; &#8593;'
-            variant='primary'
-            disabled={!isLoggedIn || !assets}
-            onClick={handleSwap}
-          />
-      </form>
-
+        <Button
+          className='btn primary swap-btn'
+          text='&#8595; &#8593;'
+          variant='primary'
+          disabled={!isLoggedIn || !assets}
+          onClick={handleSwap}
+        />
+      </div>
       <Button 
-          text="Submit" 
+          text="Exchange" 
           onClick={() => {console.log('Submit button is clicked')}} 
           disabled={!isLoggedIn} 
           variant="primary" 

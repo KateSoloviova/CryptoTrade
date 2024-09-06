@@ -15,7 +15,7 @@ input[type=number] {
 }
 
 .trade-container {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 8px;
@@ -27,7 +27,6 @@ input[type=number] {
 }
 
 .form-group {
-  display: flex;
   border: var(--border-form);
   padding: 10px 10px;
   border-radius: 10px;
@@ -36,6 +35,11 @@ input[type=number] {
   font-size: 25px;
   align-items: center;
   justify-content: center;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
 }
 
 .form-group:focus-within {
@@ -56,11 +60,6 @@ input[type=number] {
   justify-content: center;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
-}
-
 .currency {
   padding: 25px;
 }
@@ -78,7 +77,17 @@ input[type=number] {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  width: 100%;
+  margin: 10px;
+}
+
+.swap-btn {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-left: 10px;
+  height: 50px;
+  width: 5%;
 }
 
 .submit-btn:disabled {
